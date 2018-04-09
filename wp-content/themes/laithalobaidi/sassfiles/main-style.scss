@@ -1,0 +1,56 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+body {
+	position: relative;
+
+
+	.left-sidebar, .right-sidebar {
+		position: absolute;
+		padding: 1%;
+	}
+
+	.main {
+		width: 70%;
+		margin: 0 auto;
+		height: 100%;
+	}
+
+	.left-sidebar {
+		width: 15%;
+		height: 100%;
+		background-color: #000;
+		left: 0;
+		top: 0;
+		bottom: 0;
+
+
+		.logo {
+			text-align: center;
+			img {
+				width: 60%;
+				min-width: 101px;
+				height: auto;
+			}
+		}
+	}
+
+	.right-sidebar {
+		width: 15%;
+		height: 100%;
+		background-color: #000;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+}
+

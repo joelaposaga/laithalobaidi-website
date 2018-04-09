@@ -1,0 +1,2 @@
+body,html{margin:0;padding:0;height:100%}img{width:100%;max-width:100%;height:auto}body{position:relative}body .left-sidebar,body .right-sidebar{position:absolute;padding:1%}body .main{width:70%;margin:0 auto;height:100%}body .left-sidebar{width:15%;height:100%;background-color:#000;left:0;top:0;bottom:0}body .left-sidebar .logo{text-align:center}body .left-sidebar .logo img{width:60%;min-width:101px;height:auto}body .right-sidebar{width:15%;height:100%;background-color:#000;right:0;top:0;bottom:0}
+/*# sourceMappingURL=map/style.css.map */

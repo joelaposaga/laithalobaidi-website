@@ -1,0 +1,377 @@
+#get-car-price-form{
+  position: absolute;
+  max-width: 100%;
+  width: 580px;
+  left: 50%;
+  margin-left: -290px;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 9999;
+  .modal-dialog {
+    max-width: 100%;
+  }
+  .modal-body {
+    padding: 44px 37px 34px;
+
+    .alert{
+      margin-top: 15px;
+      padding: 5px 10px;
+    }
+
+    .form-group {
+      margin-bottom: 17px;
+
+      input[type="text"], input[type="number"], input[type="tel"], input[type="email"], input[type="search"], input[type="password"]{
+        display: block;
+        width: 100%;
+        height: 37px;
+        line-height: 37px;
+        padding: 0 21px;
+        font-weight: 400;
+        color: #888888;
+        border: 2px solid #eceff3;
+        font-size: 14px;
+        outline: none !important;
+        background-color: #eceff3;
+      }
+    }
+  }
+}
+
+
+.modal-header {
+  border-bottom: none;
+}
+
+
+.modal-header-iconed {
+  padding: 28px 37px 23px 105px !important;
+  position: relative;
+  background-color: #232628;
+  & h3 {
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  .test-drive-car-name {
+    margin-top: -5px;
+    color: #aaaaaa;
+  }
+  & i {
+    position: absolute;
+    top: 35px;
+    left: 32px;
+    font-size: 47px;
+    color: #6c98e1;
+  }
+}
+
+.stm-ajax-loader {
+  display: none;
+  &.loading {
+    display: inline-block;
+    -webkit-animation: rotating 2s infinite linear;
+    animation: rotating 2s infinite linear;
+  }
+}
+
+.stm_compare_cars_footer_modal{
+  display: block;
+  width: 320px;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: #FFFFFF;
+  z-index: 100;
+  box-shadow: -6px 4px 40px -4px rgba(0,0,0,0.3);
+
+  &.stm-open{
+    .stm-compare-list-wrap{
+      height: auto;
+    }
+
+    .stm-mc-header-wrap{
+      .stm-mc-header-icon-wrap{
+        &.arrow{
+          i:before{
+            content: "\f078" !important;
+          }
+        }
+      }
+    }
+  }
+
+  .stm-mc-header-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background: #232628;
+    padding: 24px 24px 13px;
+
+    .stm-mc-header-icon-wrap{
+      display: block;
+      line-height: 0;
+
+      &.ico-speed{
+        font-size: 20px;
+        color: #FFFFFF;
+        position: relative;
+
+        .stm-compare-badge{
+          display: none;
+          width: 16px;
+          overflow: hidden;
+          background: #1b61ff;
+          font-size: 10px;
+          position: absolute;
+          border-radius: 50%;
+          padding: 0px;
+          top: -5px;
+          right: -8px;
+          line-height: 15px;
+          text-align: center;
+        }
+      }
+
+      &.arrow{
+        width: 20px;
+        overflow: hidden;
+        font-size: 16px;
+        color: #FFFFFF;
+        opacity: 0.5;
+        cursor: pointer;
+      }
+    }
+
+    .stm-mc-header-title-wrap{
+      font-size: 16px;
+      color: #FFFFFF;
+      text-align: left;
+      width: 100%;
+      padding: 0 20px;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-family: Montserrat, "Helvetica Neue", sans-serif;
+
+      a{
+        color: inherit;
+        text-decoration: none;
+
+        &:hover{
+
+        }
+      }
+    }
+  }
+
+  .stm-compare-list-wrap {
+    display: block;
+    overflow: hidden;
+    height: 0;
+    -moz-transition: all .6s ease;
+    -o-transition: all .6s ease;
+    -ms-transition: all .6s ease;
+    -webkit-transition: all .6s ease;
+    transition: all .6s ease;
+
+    .stm-mc-items-wrap {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      .stm-mc-item-wrap {
+        display: flex;
+        flex-direction: row;
+        padding: 20px 24px;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #DDDDDD;
+
+        &:hover{
+          background: #f0f2f5;
+
+          &:last-child{
+            background: transparent;
+          }
+        }
+
+        .stm-mc-item-img {
+          display: block;
+          overflow: hidden;
+          position: relative;
+          width: 80px;
+          height: 53px;
+
+          img {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+          }
+        }
+
+        .stm-mc-item-title {
+          display: block;
+          overflow: hidden;
+          width: 100%;
+          max-width: 175px;
+          padding: 0 16px;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 18px;
+          font-family: Montserrat, "Helvetica Neue", sans-serif;
+        }
+
+        .stm-mc-item-remove {
+          display: block;
+          visibility: hidden;
+          line-height: 0;
+
+          button {
+            background: none;
+            padding: 0;
+
+            i {
+              color: #868686;
+              font-size: 20px;
+            }
+          }
+        }
+
+        &:hover {
+          .stm-mc-item-remove {
+            visibility: visible;
+          }
+        }
+
+        $blueColor: #007acc;
+        $blackColor: #1a1a1a;
+        
+        a.stm-compare-btn{
+          border-radius: 2px;
+          font-family: Montserrat, "Helvetica Neue", sans-serif;
+          font-weight: 700;
+          letter-spacing: 0.046875em;
+          line-height: 1;
+          padding: 0.84375em 0.875em 0.78125em;
+          text-transform: uppercase;
+          background: $blueColor;
+          border-color: darken( $blueColor, 10% ) darken( $blueColor, 15% ) darken( $blueColor, 15% );
+          color: #FFFFFF;
+          box-shadow: 0 1px 0 darken( $blueColor, 15% );
+          text-decoration: none;
+
+          &:hover,
+          &:focus {
+            background: lighten( $blackColor, 3% );
+            border-color: darken( $blackColor, 15% );
+            color: #FFFFFF;
+            box-shadow: 0 1px 0 darken( $blackColor, 15% );
+          }
+
+          &:focus {
+            box-shadow: inset 0 1px 0 darken( $blackColor, 10% ),
+            0 0 2px 1px $blackColor;
+          }
+
+          &:active {
+            background: darken( $blackColor, 3% );
+            border-color: darken( $blackColor, 15% );
+            box-shadow: inset 0 1px 0 darken( $blackColor, 15% );
+          }
+
+          &[disabled],
+          &:disabled,
+          &.button-primary-disabled,
+          &.disabled {
+            color: hsl( hue( $blueColor ), 10%, 80% ) !important;
+            background: darken( $blueColor, 8% ) !important;
+            border-color: darken( $blueColor, 15% ) !important;
+            text-shadow: none !important;
+          }
+
+          &.button-hero {
+            box-shadow: 0 2px 0 darken( $blueColor, 15% ) !important;
+            &:active {
+              box-shadow: inset 0 3px 0 darken( $blueColor, 15% ) !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#request-trade-offer-form,
+#get-car-price-form,
+#request-test-drive-form {
+	position: absolute;
+	max-width: 100%;
+	width: 580px;
+	left: 50%;
+	margin-left: -290px;
+	top: 50%;
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	z-index: 9999; }
+
+.stm-datepicker-input-icon {
+	position: relative;
+}
+
+.stm-datepicker-input-icon:after {
+	position: absolute;
+	display: block;
+	font: normal normal normal 14px/1 FontAwesome;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-transform: translate(0, 0);
+	transform: translate(0, 0);
+	right: 18px;
+	top: 50%;
+	margin-top: -8px;
+	color: #6c98e1;
+	font-size: 16px;
+	content: "\f017";
+}
+
+.stm-request-test-drive{
+	display: block;
+	text-align: center;
+	padding: 17px 28px 15px;
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: 700;
+	letter-spacing: 0.3px;
+	text-transform: uppercase;
+	color: #fff !important;
+	border-radius: 3px;
+	text-decoration: none !important;
+	outline: none !important;
+	visibility: visible;
+	border: none;
+	white-space: normal;
+	margin: 20px auto 3px;
+	float: right;
+}
+
+.msg-body{
+	padding-top: 20px;
+
+	.alert-modal{
+		padding: 9px 15px 8px;
+		margin-bottom: 0;
+	}
+}
