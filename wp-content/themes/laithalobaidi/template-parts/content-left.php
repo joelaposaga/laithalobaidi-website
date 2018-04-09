@@ -4,6 +4,3 @@
 <div class="car-search">
 	<?php dynamic_sidebar( 'left-sidebar-1' ) ?>
 </div>
-<div class="social-media">
-	
-</div>
