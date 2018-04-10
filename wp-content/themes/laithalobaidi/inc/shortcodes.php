@@ -14,7 +14,7 @@ function lao_search_shortcode($attr) {
 				<form method="post">
 					<div class="form-assets left_s select">
 						<select>
-							<option>Car Status</option>
+							<option>Condition</option>
 						</select>
 					</div>
 					<div class="form-assets left_s select">
@@ -24,7 +24,7 @@ function lao_search_shortcode($attr) {
 					</div>
 					<div class="form-assets left_s select">
 						<select>
-							<option>Brand</option>
+							<option>Car Make</option>
 							<option>Aston Martin</option>
 							<option>Honda</option>
 							<option>Hyundai</option>
@@ -32,7 +32,7 @@ function lao_search_shortcode($attr) {
 					</div>
 					<div class="form-assets left_s select">
 						<select>
-							<option>Model</option>
+							<option>Car Model</option>
 						</select>
 					</div>
 					<div class="form-assets left_s select">
@@ -47,7 +47,7 @@ function lao_search_shortcode($attr) {
 					</div>
 					<div class="form-assets left_s select">
 						<select>
-							<option>Quantity</option>
+							<option>Price Range</option>
 						</select>
 					</div>
 					<div class="form-assets left_s submit">
