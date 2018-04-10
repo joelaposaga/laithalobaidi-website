@@ -81,6 +81,7 @@ function twentyseventeen_scripts() {
 	wp_enqueue_style( 'lao-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'lao-main-style', get_template_directory_uri() . '/css/style.css', array(), '1.0.0', 'all' );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/libs/fontawesome/css/font-awesome.min.css', array(), '1.0.0' );
+	wp_enqueue_style( 'bootstrap-grid', get_template_directory_uri() . '/libs/bootstrap-grid/bootstrap-grid.min.css', array(), '1.0.0' );
 
 }
 add_action( 'wp_enqueue_scripts', 'twentyseventeen_scripts' );
