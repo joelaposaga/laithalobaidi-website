@@ -5,7 +5,6 @@
 
 get_header(); ?>
 
-
 <?php
 // Show the selected front page content.
 if ( have_posts() ) :
@@ -18,6 +17,4 @@ if ( have_posts() ) :
 	_e('')*/
 endif;
 ?>
-
-
 <?php get_footer();
