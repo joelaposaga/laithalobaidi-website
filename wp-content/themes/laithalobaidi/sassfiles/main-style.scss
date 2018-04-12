@@ -1,8 +1,9 @@
 html, body {
 	margin: 0;
 	padding: 0;
-	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+	font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
 	color: #000;
+	font-size: 0.9em;
 }
 
 img {
@@ -32,7 +33,7 @@ p {
 h1, h2 {
 	&.title {
 		text-align: center;
-		text-transform: uppercase;
+		text-transform: capitalize;
 
 		> span {
 			position: relative;
@@ -63,17 +64,27 @@ h1, h2 {
 	}
 }
 
+h1 {
+	&.title {
+		font-size: 1.8em;
+	}
+}
+
+iframe {
+	display: block;
+}
+
 body {
 
 	.left-sidebar, .right-sidebar {
 		position: fixed;
 		padding: 15px;
-		width: 250px;
+		width: 200px;
 	}
 
 	.main {
 		width: 100%;
-		padding: 0 250px;
+		padding: 0 200px;
 	}
 
 	.left-sidebar {
@@ -85,8 +96,8 @@ body {
 		.logo {
 			text-align: center;
 			img {
-				max-width: 101px;
-				min-width: 80px;
+				max-width: 80px;
+				min-width: 50px;
 				height: auto;
 			}
 		}
@@ -130,6 +141,8 @@ select, button[type="submit"] {
 				background-repeat: no-repeat;
 				background-size: 10px 9px;
 				background-position: 95% center;
+
+				font-size: 0.85em;
 			}
 		}
 		&.submit {
@@ -139,6 +152,8 @@ select, button[type="submit"] {
 				border: 2px solid #ff0000;
 				color: #ff0000;
 				text-transform: uppercase;
+				font-size: 0.85em;
+				padding: 12px 8px;
 			}
 		}
 	}

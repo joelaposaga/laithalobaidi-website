@@ -28,6 +28,8 @@ function lao_setup() {
 
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
+	remove_filter('the_content', 'wpautop');
+
 }
 add_action( 'after_setup_theme', 'lao_setup' );
 
