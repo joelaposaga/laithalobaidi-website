@@ -25,7 +25,7 @@ $show_certified_logo_2 = get_theme_mod('show_certified_logo_2', false);
 
 <div class="single-car-actions">
     <ul class="list-unstyled clearfix">
-
+        
         <!--Stock num-->
         <?php if (!empty($stock_number) and !empty($show_stock) and $show_stock): ?>
             <li>
@@ -33,6 +33,17 @@ $show_certified_logo_2 = get_theme_mod('show_certified_logo_2', false);
                         # </span><?php echo esc_attr($stock_number); ?></div>
             </li>
         <?php endif; ?>
+
+        <!-- Inquire Now -->
+        <li>
+            <a href="" class="car-action-unit inquire-now"><?php esc_html_e('Inquire Now', 'motors'); ?></a>
+        </li>
+
+        <!-- Email To A Friend -->
+        <li>
+            <a href="" class="car-action-unit email-to-a-friend"><?php esc_html_e('Email To A Friend', 'motors'); ?></a>
+        </li>
+
 		<!--Schedule-->
 		<?php if (!empty($show_test_drive) and $show_test_drive): ?>
 			<li>
@@ -113,6 +124,9 @@ $show_certified_logo_2 = get_theme_mod('show_certified_logo_2', false);
                      alt="<?php esc_html_e('Logo 2', 'stm_vehicles_listing'); ?>"/>
             </li>
         <?php endif; ?>
+
+        <!-- Share -->
+        <li><?php echo do_shortcode( '[addtoany]' ) ?></li>
 
     </ul>
 </div>

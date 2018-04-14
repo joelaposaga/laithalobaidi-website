@@ -145,7 +145,7 @@
 							margin: 0 auto;
 							font-size: 10px;
 							font-weight: bold;
-							margin-bottom: 10px;
+							margin-bottom: 15px;
 						}
 						> h2 {
 							margin: 0;
@@ -158,6 +158,7 @@
 						> div {
 							text-align: center;
 							text-transform: uppercase;
+							margin-bottom: 7px;
 						}
 
 						.newsletter_home {
@@ -168,6 +169,16 @@
 								margin-right: 10px;
 								&:first-child, &:nth-child(2) {
 									width: 45%;
+									position: relative;
+
+									.fa {
+										position: absolute;
+										top: 50%;
+										left: 15px;
+										transform: translateY(-50%);
+										font-size: 1.3em;
+										color: #717575;
+									}
 								}
 								&:nth-child(3) {
 									width: 10%;
@@ -178,17 +189,220 @@
 									width: 100%;
 									padding: 8px 12px;
 									border-radius: 150px;
+									border: 1px solid #1e1e1e;
+									background-color: #323232;
+									outline: none;
+									box-shadow: none;
+									padding: 10px 15px;
+									font-size: 1.2em;
+									padding-left: 45px;
 								}
 
 								button[type="submit"] {
 									padding: 0px;
-									width: 34px;
-									height: 34px;
+									width: 36px;
+									height: 36px;
 									border-radius: 50%;
+									background-color: #ff0000;
+									color: #fff;
+									border: none;
 								}
 							}
 						}
 					}
+				}
+			}
+		}
+	}
+
+	.testimonial_home {
+		padding-left: 40px;
+		padding-right: 40px;
+
+		> .container {
+			background-image: url('../image/home_testimonial_bg.jpg');
+			background-position: center center;
+			background-size: cover;
+			padding: 6%;
+
+			> div {
+				padding: 30px;
+				h2 {
+					margin: 0;
+					margin-bottom: 10px;
+					text-transform: uppercase;
+					font-size: 2em;
+					color: #ff0000;
+					line-height: 1;
+				}
+
+				.tagline {
+					text-align: center;
+					font-size: 1.5em;
+					margin-bottom: 30px;
+				}
+				#home_testimonial_slider {
+					padding-left: 50px;
+					padding-right: 50px;
+					.slick-prev {
+						position: absolute;
+						left: -15px;
+						top: 50%;
+						transform: translateY(-50%);
+					}
+					.slick-next {
+						position: absolute;
+						right: -15px;
+						top: 50%;
+						transform: translateY(-50%);
+					}
+
+					.slick-prev, .slick-next {
+						width: 35px;
+						height: 35px;
+						border-radius: 50%;
+						color: #ff0000;
+						background-color: transparent;
+						border: none;
+						outline: none;
+						box-shadow: none;
+						z-index: 1;
+						font-size: 1.5em;
+					}
+
+					.slick-list {
+						z-index: 0;
+
+						.slick-slide {
+							outline: none;
+							box-shadow: none;
+
+							.single_testimonial {
+								> div {
+									&:first-child {
+										text-align: center;
+										font-size: 1.1em;
+										line-height: 1.6;
+										font-weight: 400;
+										font-style: italic;
+										margin-bottom: 25px;
+
+										&:before {
+											content: '\f10d';
+											font-family: 'FontAwesome';
+											margin-right: 15px;
+										}
+										&:after {
+											content: '\f10e';
+											font-family: 'FontAwesome';
+											margin-left: 15px;
+										}
+									}
+									&:nth-child(2) {
+										display: flex;
+										align-items: center;
+										justify-content: center;
+										text-transform: capitalize;
+
+
+										> div {
+											img {
+												width: 50px;
+												border-radius: 50%;
+												margin-right: 15px;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.why_choose_us {
+		h2.title {
+			margin-bottom: 35px;
+		}
+		> .container {
+			> .row {
+				> [class^="col-"] {
+					> div {
+						text-align: center;
+						&:first-child {
+							.fa {
+								font-size: 5em;
+								color: #ff0000;
+							}
+							margin-bottom: 15px;
+						}
+						&:nth-child(2) {
+							text-transform: uppercase;
+							font-weight: 700;
+							font-size: 1.1em;
+							margin-bottom: 20px;
+						}
+						&:nth-child(3) {
+							line-height: 1.5em;
+							text-align: justify;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.single_info {
+		
+	}
+
+	.lao_tab {
+		> ul {
+			margin-bottom: 2px;
+			> li {
+				float: left;
+				margin-right: 2px;
+				> a {
+					display: block;
+					background-color: #ff0000;
+					padding: 12px 50px;
+					font-size: 12px;
+					color: #fff;
+					text-transform: uppercase;
+					transition: all 0.2s ease;
+					font-weight: 700;
+
+					&.active {
+						background-color: #f0f2f5;
+						color: #000;
+					}
+				}
+			}
+			&:after {
+				content: '';
+				clear: both;
+				display: block;
+				height: 0;
+				opacity: 0;
+				overflow: hidden;
+			}
+		}
+
+		> .tab_content {
+			> div {
+				height: 0;
+				opacity: 0;
+				visibility: hidden;
+				overflow: hidden;
+				transition: all 0.2s ease;
+
+				&.active {
+					height: auto;
+					overflow: visible;
+					opacity: 1;
+					visibility: visible;
 				}
 			}
 		}

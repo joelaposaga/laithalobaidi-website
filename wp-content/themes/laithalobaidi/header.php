@@ -18,3 +18,10 @@
 		<?php get_template_part( 'template-parts/content', 'left' ); ?>
 	</div>
 	<div class="main">
+	<?php  
+
+		if (is_singular( 'listings' )) {
+			echo "hello World";
+		}
+
+	?>

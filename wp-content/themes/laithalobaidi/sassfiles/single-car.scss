@@ -1,0 +1,61 @@
+/* reset */
+.single_car {
+	max-width: 992px;
+}
+.single_car_title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 2px solid #ff0000;
+	margin-bottom: 15px;
+	> div {
+		&:first-child {
+			width: calc(100% - 300px);
+			margin-right: 30px;
+			h2 {
+				text-align: left;
+				font-size: 2em;
+				margin: 0;
+			}
+		}
+		&:nth-child(2) {
+			width: 300px;
+
+			.single-car-prices {
+				background-color: transparent;
+				position: relative;
+				background-color: #ff0000;
+				margin-left: 25px;
+				span {
+					font-size: 2em;
+					font-weight: 700;
+				}
+				&:before {
+					position: absolute;
+					content: '';
+					display: block;
+					top: 0;
+					left: -14px;
+					height: 100%;
+					width: 32px;
+					background-color: #ff0000;
+					transform: skew(-18deg,0deg);
+				}
+				.single-regular-price {
+					padding: 15px 10px;
+				}
+			}
+		}
+	}
+}
+.stm-car-carousels {
+	margin-bottom: 15px;
+	.stm-big-car-gallery {
+		margin-bottom: 10px;
+	}
+	.stm-thumbs-car-gallery {
+		.owl-item {
+			margin-right: 10px !important;
+		}
+	}
+}

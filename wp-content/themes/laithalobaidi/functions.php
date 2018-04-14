@@ -1,6 +1,7 @@
 <?php
 
 
+
 function lao_setup() {
 
 	add_theme_support( 'automatic-feed-links' );
@@ -55,6 +56,16 @@ function lao_widgets_init() {
 		'after_title'   => '',
 	) );
 
+	register_sidebar( array(
+		'name'          => __( 'Footer', 'laith-al-obaidi' ),
+		'id'            => 'footer-1',
+		'description'   => __( 'All the footer contents goes here', 'laith-al-obaidi' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
+
 	/*register_sidebar( array(
 		'name'          => __( 'Footer 1', 'laith-al-obaidi' ),
 		'id'            => 'sidebar-2',
@@ -78,15 +89,19 @@ function lao_widgets_init() {
 add_action( 'widgets_init', 'lao_widgets_init' );
 
 
-function twentyseventeen_scripts() {
+function lao_scripts() {
 
 	wp_enqueue_style( 'lao-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'lao-main-style', get_template_directory_uri() . '/css/style.css', array(), '1.0.0', 'all' );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/libs/fontawesome/css/font-awesome.min.css', array(), '1.0.0' );
 	wp_enqueue_style( 'bootstrap-grid', get_template_directory_uri() . '/libs/bootstrap-grid/bootstrap-grid.min.css', array(), '1.0.0' );
+	wp_enqueue_style( 'slick-css', get_template_directory_uri() . '/libs/slick/slick.css', array(), '1.0.0' );
+
+	wp_enqueue_script( 'slick-script', get_template_directory_uri() . '/libs/slick/slick.min.js', array(), '1.8.0', true );
+	wp_enqueue_script( 'main-script', get_template_directory_uri() . '/js/main_script.js', array(), '1.0.0', true );
 
 }
-add_action( 'wp_enqueue_scripts', 'twentyseventeen_scripts' );
+add_action( 'wp_enqueue_scripts', 'lao_scripts' );
 
 
 require (get_template_directory() . '/inc/shortcodes.php');
